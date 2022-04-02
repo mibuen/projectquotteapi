@@ -12,7 +12,6 @@ exports.uploadS3V4 = async (key) => {
     { bucket: process.env.BUCKET },
     ['content-length-range', 0, 10000000],
     ['starts-with', '$Content-Type', 'image/'],
-    ['Cache-Control', 'max-age', 31536000],
   ]
   const Fields = {
     //	acl: 'public-read',
