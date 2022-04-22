@@ -149,7 +149,7 @@ exports.plugin = {
           try {
             const proyectos = await getResources(colPry, pipeline)
             //console.log(proyectos);
-            return proyectos
+            return transform(proyectos)
           } catch (error) {
             console.log(error)
             return error
@@ -177,12 +177,10 @@ exports.plugin = {
             cotizacionId: parseInt(cotizacionId, 10),
             proyectoId: parseInt(proyectoId, 10),
           }
-          //console.log('TIPO', tipo);
-          //console.log('LA VERDAD', tipo ? { [tipo]: laFoto } : { reporte });
           const data = tipo ? { [tipo]: laFoto } : { reporte }
-          //console.log('DATA', data);
+
           const savedFoto = await addFoto('proyectos', query, data)
-          //console.log(savedFoto);
+
           return savedFoto.modifiedCount > 0
             ? h.response({ message: 'file agregado' })
             : h.notValid()
