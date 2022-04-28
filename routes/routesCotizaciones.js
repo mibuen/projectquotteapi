@@ -1,5 +1,3 @@
-//const { badData } = require('@hapi/boom');
-
 exports.plugin = {
   name: 'routesCotizacion',
   version: '1.0.0',

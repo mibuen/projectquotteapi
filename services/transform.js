@@ -12,12 +12,9 @@ exports.transform = (data) => {
       inicio: item.inicio,
       terminado: item.terminado,
       factura: item.factura,
-      //vistas: item.vistas ? item.vistas.length : 0,
-      //fotos: item.empezar.length + item.terminar.length,
       fotosEmpezar: item.empezar,
       fotosTerminar: item.terminar,
       reporte: item.reporte,
-      //totalReportes: item.reporte.length || 0,
     }
   })
 }

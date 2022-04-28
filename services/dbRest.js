@@ -35,8 +35,6 @@ exports.plugin = {
     server.method({
       name: 'addFoto',
       method: async (col, query, data) => {
-        //console.log('QUERY', query)
-        //console.log('DATA', data)
         return DB(col).updateOne(query, { $push: data })
       },
     })

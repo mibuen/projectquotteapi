@@ -6,9 +6,12 @@ exports.plugin = {
     const notFound = (options = 'RESOURCE_NOT_FOUND') => Boom.notFound(options)
     const duplicated = (options = '') =>
       Boom.badRequest(`E11000 REGISTRO_DUPLICADO ${options}`)
-    const notValid = () => Boom.notAcceptable('COTIZACION_SIN_PROYECTOS')
-    const notImage = () => Boom.unsupportedMediaType('WRONG_FILE_TYPE')
-    const badData = () => Boom.badData('WRONG_OR_EMPTY_REQUEST')
+    const notValid = (options = 'COTIZACION_SIN_PROYECTOS') =>
+      Boom.notAcceptable(options)
+    const notImage = (options = 'WRONG_FILE_TYPE') =>
+      Boom.unsupportedMediaType(options)
+    const badData = (options = 'WRONG_OR_EMPTY_REQUEST') =>
+      Boom.badData(options)
     const notSaved = (options = 'DB_RESOURCE_NOT_UPDATED') =>
       Boom.badData(options)
 

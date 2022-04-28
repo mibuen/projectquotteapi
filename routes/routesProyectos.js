@@ -80,7 +80,6 @@ exports.plugin = {
           }
           try {
             const saveProyectos = await saveMany(colPry, proyectos)
-            //console.log('INSIDE SAVEPROYECTOS', saveProyectos);
             return {
               message: `proyectos agregados ${saveProyectos.insertedCount}`,
             }

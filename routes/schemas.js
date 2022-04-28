@@ -1,6 +1,20 @@
 const { required } = require('joi')
 const Joi = require('joi')
 
+module.exports.baseSchema = Joi.object({
+  cotizacionId: Joi.alternatives(
+    Joi.number(),
+    Joi.string()
+      .required()
+      .pattern(/^[0-9]+$/),
+  ),
+  proyectoId: Joi.alternatives(
+    Joi.number(),
+    Joi.string()
+      .required()
+      .pattern(/^[0-9]+$/),
+  ),
+})
 module.exports.fotoSchema = Joi.object({
   cotizacionId: Joi.alternatives(
     Joi.number(),
