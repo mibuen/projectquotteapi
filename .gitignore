@@ -3,5 +3,5 @@
 .eslintjs
 node_modules
 .DS_Store
-.eslintrc.js
+.eslintrc
 .vscode

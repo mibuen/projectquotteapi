@@ -7,6 +7,6 @@ exports.plugin = {
       { plugin: require('./routesProyectos') },
       { plugin: require('./fotoRoutes') },
       { plugin: require('./reporteRoutes') },
-    ])
+    ]);
   },
-}
+};

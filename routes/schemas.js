@@ -1,5 +1,4 @@
-const { required } = require('joi')
-const Joi = require('joi')
+const Joi = require('joi');
 
 // module.exports.baseSchema = Joi.object({
 //   cotizacionId: Joi.alternatives(
@@ -20,30 +19,30 @@ module.exports.fotoSchema = Joi.object({
     Joi.number(),
     Joi.string()
       .required()
-      .pattern(/^[0-9]+$/),
+      .pattern(/^[0-9]+$/)
   ),
   proyectoId: Joi.alternatives(
     Joi.number(),
     Joi.string()
       .required()
-      .pattern(/^[0-9]+$/),
+      .pattern(/^[0-9]+$/)
   ),
   tipo: Joi.string().required().valid('empezar', 'terminar'),
   laFoto: Joi.string().required(),
-})
+});
 
 module.exports.reporteSchema = Joi.object({
   cotizacionId: Joi.alternatives(
     Joi.number(),
     Joi.string()
       .required()
-      .pattern(/^[0-9]+$/),
+      .pattern(/^[0-9]+$/)
   ),
   proyectoId: Joi.alternatives(
     Joi.number(),
     Joi.string()
       .required()
-      .pattern(/^[0-9]+$/),
+      .pattern(/^[0-9]+$/)
   ),
   reporte: Joi.object({
     grupo1: Joi.object({
@@ -55,18 +54,18 @@ module.exports.reporteSchema = Joi.object({
       final: Joi.string(),
     }),
   }),
-})
+});
 module.exports.verReporte = Joi.object({
   cotizacionId: Joi.alternatives(
     Joi.number(),
     Joi.string()
       .required()
-      .pattern(/^[0-9]+$/),
+      .pattern(/^[0-9]+$/)
   ),
   proyectoId: Joi.alternatives(
     Joi.number(),
     Joi.string()
       .required()
-      .pattern(/^[0-9]+$/),
+      .pattern(/^[0-9]+$/)
   ),
-})
+});

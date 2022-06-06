@@ -13,6 +13,7 @@ exports.plugin = {
         return DB(col).aggregate(pipeline).toArray()
       },
     })
+
     server.method({
       name: 'getResource',
       method: async (col, query) => await DB(col).findOne(query),
